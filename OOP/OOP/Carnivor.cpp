@@ -4,13 +4,13 @@ Carnivor::Carnivor(int i, const std::string& n, unsigned v, Client* p, bool blan
     : Mamifer(i, n, v, p, blana) {
     tipCarne = carne;
 }
-double Carnivor::CalculeazaCost() {
+double Carnivor::CalculeazaCost()const {
     double costBaza = Mamifer::CalculeazaCost();
     // carnivorele sunt mai scumpe cu 20%
     return costBaza * 1.2;
 }
 
-void Carnivor::Afiseaza() {
+void Carnivor::Afiseaza()const {
     Mamifer::Afiseaza();
     std::cout << "Tip carne: " << tipCarne << "\n";
 }
