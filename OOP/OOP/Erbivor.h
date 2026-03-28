@@ -9,4 +9,5 @@ public:
     //mostenite de la mamifer,care le a mostenit de la animal 
     double CalculeazaCost() override;
     void Afiseaza() override;
+~Erbivor() override = default;
 };
