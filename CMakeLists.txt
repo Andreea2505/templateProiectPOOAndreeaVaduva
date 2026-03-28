@@ -16,7 +16,24 @@ else()
 endif()
 
 # Main executable
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME}
+    OOP/OOP/main.cpp
+    OOP/OOP/Animal.cpp
+    OOP/OOP/Carnivor.cpp
+    OOP/OOP/Client.cpp
+    OOP/OOP/Consultatie.cpp
+    OOP/OOP/Erbivor.cpp
+    OOP/OOP/Exceptii.cpp
+    OOP/OOP/Mamifer.cpp
+    OOP/OOP/Medicament.cpp
+    OOP/OOP/MedicClient.cpp
+    OOP/OOP/MedicVeterinar.cpp
+    OOP/OOP/Meniu.cpp
+    OOP/OOP/Pasare.cpp
+    OOP/OOP/Persoana.cpp
+    OOP/OOP/Reptila.cpp
+    OOP/OOP/Stoc.cpp
+)
 
 if(GITHUB_ACTIONS)
     message("NOTE: GITHUB_ACTIONS defined")
