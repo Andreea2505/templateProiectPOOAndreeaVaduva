@@ -21,3 +21,4 @@ std::string MedicVeterinar::getSpecializare() const { return specializare; }
 std::string MedicVeterinar::getNume() const {
     return Persoana::getNume();
 }
+MedicVeterinar::~MedicVeterinar() {}
