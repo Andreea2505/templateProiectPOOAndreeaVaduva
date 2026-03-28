@@ -2,7 +2,7 @@
 #include "Client.h"
 
 int Animal::nrAnimale = 0;
-Animal::Animal(int i, std::string n, unsigned v, Client* p) {
+Animal::Animal(int i, const std::string& n, unsigned v, Client* p) {
 	id = i;
 	nume = n;
 	varsta = v;
@@ -13,7 +13,7 @@ Animal::Animal(int i, std::string n, unsigned v, Client* p) {
 Animal:: ~Animal(){
 	nrAnimale--;
 }
-void Animal::Afiseaza() {
+void Animal::Afiseaza()const {
 	std::cout << "id: " << id << "  nume: " << nume << "  varsta: " << varsta;
 }
 int Animal::getId()const {
