@@ -10,12 +10,12 @@ protected:
     static int nrClienti;
 
 public:
-    Client(int i, std::string n, std::string t, std::string adr);
+    Client(int i,const std::string& n, std::string t, std::string adr);
     ~Client();
 
     void adaugaAnimal(Animal* a);
     void afiseaza() const;
-    void setNume(std::string n);
+     void setNume(const std::string& n);
     int getId() const;
 
     static int getNrClienti();
