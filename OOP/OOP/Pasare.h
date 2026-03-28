@@ -4,9 +4,9 @@ class Pasare :public Animal {
 private:
 	double anverguraAripi;
 public:
-	Pasare(int i, std::string n, unsigned v, Client* p, double a);
-	double CalculeazaCost()  override;
-	void Afiseaza() override;
+	Pasare(int i, const std::string& n, unsigned v, Client* p, double a);
+	double CalculeazaCost()const  override;
+	void Afiseaza()const override;
 
 
 };
