@@ -9,3 +9,4 @@ public:
 
     void afiseaza() const;
 };
+~MedicClient() override;
