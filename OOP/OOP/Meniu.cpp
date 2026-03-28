@@ -34,18 +34,34 @@ void Meniu::ruleaza() {
         std::cout << "\n1.Adauga persoana\n2.Adauga animal\n3.Afisare stoc\n";
         std::cout << "4.Adauga medicament\n5.Consultatie\n6.Afisare\n7.Sterge animal\n8.Statistici\n9.Actualizare stoc medicament\n0.Exit\n";
 
-        std::cin >> opt;
-        valideazaNumar(std::cin);
+        if (!(std::cin >> opt)) {
+            if (std::cin.eof()) {
+                // end-of-file: stop gracefully in batch mode
+                break;
+            }
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Eroare: Trebuie introdus un NUMAR valid!\n";
+            continue;
+        }
 
-        if (opt == 1) adaugaPersoana();
-        else if (opt == 2) adaugaAnimal();
-        else if (opt == 3) afiseazaStoc();
-        else if (opt == 4)adaugaMedicament();
-        else if (opt == 5) efectueazaConsultatie();
-        else if (opt == 6) afiseazaToateDatele();
-        else if (opt == 7) stergeAnimal();
-        else if (opt == 8) afiseazaStatistici();
-        else if (opt == 9) actualizeazaStocMedicament();
+        try {
+            if (opt == 1) adaugaPersoana();
+            else if (opt == 2) adaugaAnimal();
+            else if (opt == 3) afiseazaStoc();
+            else if (opt == 4) adaugaMedicament();
+            else if (opt == 5) efectueazaConsultatie();
+            else if (opt == 6) afiseazaToateDatele();
+            else if (opt == 7) stergeAnimal();
+            else if (opt == 8) afiseazaStatistici();
+            else if (opt == 9) actualizeazaStocMedicament();
+            else if (opt != 0) {
+                std::cout << "Eroare: Optiune invalida.\n";
+            }
+        }
+        catch (const UserInputError& e) {
+            std::cout << "Eroare: " << e.what() << "\n";
+        }
 
     } while (opt != 0);
 }
