@@ -1,6 +1,6 @@
 #include "Persoana.h"
 #include <iostream>
-Persoana::Persoana(std::string n, std::string t) {
+Persoana::Persoana(const std::string& n, std::string t) {
     nume = n;
     telefon = t;
 }
