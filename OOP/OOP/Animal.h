@@ -11,10 +11,10 @@ protected:
 	Client* proprietar;
 	static int nrAnimale;
 public:
-	Animal(int i, std::string n, unsigned v, Client* p);
+	Animal(int i, const std::string& n, unsigned v, Client* p);
 	virtual ~Animal();
-	virtual void Afiseaza();
-	virtual double CalculeazaCost() = 0;
+	virtual void Afiseaza() const ;
+	virtual double CalculeazaCost() const =0;
 	int  getId() const;
 	static int getNrAnimale();
 };
