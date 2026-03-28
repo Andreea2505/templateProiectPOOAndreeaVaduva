@@ -4,9 +4,9 @@ class Mamifer: public Animal {
 private:
 	bool areBlana;
 public:
-	Mamifer(int i, std::string n, unsigned v, Client* p, bool Blana);
-	double CalculeazaCost() override;
-	void Afiseaza() override;
+	Mamifer(int i,const std::string& n, unsigned v, Client* p, bool Blana);
+	double CalculeazaCost()const override;
+	void Afiseaza()const override;
 
 
 
