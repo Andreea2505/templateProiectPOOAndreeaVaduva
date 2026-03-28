@@ -8,7 +8,7 @@ protected:
     std::string specializare;
 
 public:
-    MedicVeterinar(std::string n, std::string t, double s, std::string spec);
+    MedicVeterinar(const std::string& n, std::string t, double s, std::string spec);
      ~MedicVeterinar();
 
     void afiseaza() const;
