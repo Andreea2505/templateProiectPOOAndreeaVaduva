@@ -16,5 +16,6 @@ public:
     std::string getSpecializare() const;
 
     std::string getNume() const;
+~MedicVeterinar() override;
 
 };
