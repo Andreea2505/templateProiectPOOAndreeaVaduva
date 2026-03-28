@@ -1,7 +1,7 @@
 #include "MedicVeterinar.h"
 #include <iostream>
 
-MedicVeterinar::MedicVeterinar(std::string n, std::string t, double s, std::string spec)
+MedicVeterinar::MedicVeterinar(const std::string& n, std::string t, double s, std::string spec)
     : Persoana(n, t) {
     salariu = s;
     specializare = spec;
