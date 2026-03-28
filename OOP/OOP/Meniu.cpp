@@ -10,6 +10,7 @@
 #include "Medicament.h"
 #include "Exceptii.h"
 #include <iostream>
+#include <limits>
 
 Meniu* Meniu::instanta = nullptr;
 
@@ -36,7 +37,6 @@ void Meniu::ruleaza() {
 
         if (!(std::cin >> opt)) {
             if (std::cin.eof()) {
-                // end-of-file: stop gracefully in batch mode
                 break;
             }
             std::cin.clear();
