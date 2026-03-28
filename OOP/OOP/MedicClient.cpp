@@ -1,7 +1,7 @@
 #include "MedicClient.h"
 #include <iostream>
 
-MedicClient::MedicClient(int id, std::string n, std::string t, std::string adr, double s, std::string spec)
+MedicClient::MedicClient(int id, const std::string& n, std::string t, std::string adr, double s, std::string spec)
     : Persoana(n, t), Client(id, n, t, adr), MedicVeterinar(n, t, s, spec) {
  
 }
