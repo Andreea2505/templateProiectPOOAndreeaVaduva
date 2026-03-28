@@ -5,7 +5,6 @@ int main() {
 
     meniu->ruleaza();
 
-    delete meniu;
 
     return 0;
 }
