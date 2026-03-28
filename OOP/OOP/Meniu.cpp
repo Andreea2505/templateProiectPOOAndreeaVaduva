@@ -21,7 +21,7 @@ Meniu::~Meniu() {
 
     for (size_t i = 0; i < persoane.size(); i++)
         delete persoane[i];
-    instanta=nullptr;
+
 }
 
 Meniu* Meniu::getInstanta() {
