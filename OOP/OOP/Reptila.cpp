@@ -1,16 +1,16 @@
 #include "Reptila.h"
 #include<iostream>
-Reptila::Reptila(int i, std::string n, unsigned v,Client * p, bool e) :Animal(i, n, v,p) {
+Reptila::Reptila(int i, const std::string& n, unsigned v,Client * p, bool e) :Animal(i, n, v,p) {
 	esteVeninoasa = e;
 }
-double Reptila::CalculeazaCost() {
+double Reptila::CalculeazaCost()const {
 	if (esteVeninoasa)
 		return 150;
 	else
 		return 90;
 }
 
-void Reptila::Afiseaza()
+void Reptila::Afiseaza()const 
 {
 	Animal::Afiseaza();
 	std::cout << "Este veninoasa: ";
