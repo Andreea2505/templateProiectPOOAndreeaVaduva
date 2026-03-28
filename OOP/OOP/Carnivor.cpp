@@ -1,6 +1,6 @@
 #include "Carnivor.h"
 #include <iostream>
-Carnivor::Carnivor(int i, std::string n, unsigned v, Client* p, bool blana, std::string carne)
+Carnivor::Carnivor(int i, const std::string& n, unsigned v, Client* p, bool blana, std::string carne)
     : Mamifer(i, n, v, p, blana) {
     tipCarne = carne;
 }
