@@ -6,7 +6,7 @@ protected:
     std::string telefon;
 public:
     //constructor 
-    Persoana(std::string n, std::string t);
+    Persoana(const std::string& n, std::string t);
     //destructor virtual 
     virtual ~Persoana();
     //const pt ca nu modifica obiectul 
