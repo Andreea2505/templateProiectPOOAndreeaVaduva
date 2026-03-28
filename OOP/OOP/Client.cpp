@@ -2,7 +2,7 @@
 #include <iostream>
 
 int Client::nrClienti = 0;
-Client::Client(int i, std::string n, std::string t, std::string adr)
+Client::Client(int i,const std::string& n, std::string t, std::string adr)
     : Persoana(n, t) {
     id = i;
     adresa = adr;
@@ -21,7 +21,7 @@ void Client::afiseaza() const {
     std::cout << "Nr animale: " << animale.size() << "\n";
 }
 
-void Client::setNume(std::string n) {
+void Client::setNume(const std::string& n) {
     nume = n;
 }
 
